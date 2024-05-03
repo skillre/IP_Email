@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ip-email-api:
+    build: .
+    ports:
+      - "8006:5000"
+    environment:
+      - FLASK_APP=app.py
+    networks:
+      - fastgpt_fastgpt
+networks:
+  fastgpt_fastgpt:
